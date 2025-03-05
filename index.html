@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Defaced</title>
+    <style>
+        /* Full-screen background GIF */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('https://media1.tenor.com/m/FcA59Dz2qf0AAAAd/watch-dogs2-dedsec.gif') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        /* Typewriter effect */
+        .typewriter h1 {
+            overflow: hidden;
+            border-right: .15em solid #8A2BE2; /* Neon purple caret */
+            white-space: nowrap;
+            margin: 0 auto;
+            animation: typing 3s steps(30, end), blink-caret .75s step-end infinite, glow 1.5s infinite alternate;
+            color: #8A2BE2; /* Neon purple text */
+            text-shadow: 0 0 5px #8A2BE2, 0 0 10px #8A2BE2, 0 0 20px #8A2BE2;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #8A2BE2; }
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #8A2BE2, 0 0 10px #8A2BE2, 0 0 20px #8A2BE2; }
+            to { text-shadow: 0 0 10px #8A2BE2, 0 0 20px #8A2BE2, 0 0 30px #8A2BE2; }
+        }
+
+        /* Transparent iframe for clickjacking effect */
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: transparent;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body onclick="window.location.href='https://firecompass.com'">
+    <div class="typewriter">
+        <h1>Contact FireCompass.</h1>
+    </div>
+    <iframe></iframe>
+</body>
+</html>
